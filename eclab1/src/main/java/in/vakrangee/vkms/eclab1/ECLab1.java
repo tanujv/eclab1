@@ -48,7 +48,7 @@ public class ECLab1 {
         }
     }
 
-    private void findMinimalDistances(Vertex node) {
+    public void findMinimalDistances(Vertex node) {
         List<Vertex> adjacentNodes = getNeighbors(node);
         for (Vertex target : adjacentNodes) {
             if (getShortestDistance(target) > getShortestDistance(node)
@@ -62,7 +62,7 @@ public class ECLab1 {
 
     }
 
-    private int getDistance(Vertex node, Vertex target) {
+    public int getDistance(Vertex node, Vertex target) {
         for (Edge edge : edges) {
             if (edge.getSource().equals(node)
                     && edge.getDestination().equals(target)) {
